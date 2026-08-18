@@ -7,16 +7,17 @@ import { Link, NavLink } from 'react-router'
 const Navbar = ({containerStyles,toggleMenu,menuOpened}) => {
 
   const navItems = [
+
     {to: "/", label: "Home", icon: <SiGooglehome/>},
     {to: "/collection", label: "Collection", icon: <BsCollectionFill/>},
     {to: "/about", label: "About", icon: <SiAtlassian/>},
-    {to: "/mailto:nursajid1200@gmail.com", label: "Contact", icon: <SiMaildotcom/>},
+    {to: "/contact", label: "Contact", icon: <SiMaildotcom/>},
   ]
   return (
     <nav className={containerStyles}>
       {menuOpened && (
         <div className="flex justify-between items-center mb-8">
-          <Link to="/" className="text-2xl font-bold text-cyan-500">
+          <Link to="/" className="text-2xl font-bold text-red-500">
             Shoppire
           </Link>
           <FaRegWindowClose
